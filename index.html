@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Text Editor</title>
+        <link rel="stylesheet" href="myStylesheet.css">
+        <script src="myJavascript.js" defer></script> 
+    </head>
+    <body>
+        <div class="topbar_FlexboxContainer1">
+            <div class="topbar_FlexboxContainer2">
+                <button class="topbar_Button">Home</button>
+                <button class="topbar_Button">Insert</button>
+                <button class="topbar_Button">Layout</button>                
+            </div>
+            <div class="topbar_FlexboxContainer2">
+                <button class="topbar_Button rightTopButton">Comments</button>
+                <button class="topbar_Button rightTopButton">About</button>
+            </div>
+        </div>
+        <div class="menu_FlexboxContainer">
+            <div class="menu_FlexboxContainerSec1">
+                <button onclick="undo();" class="menu_FlexboxContainerButton"><img class="menu_FlexboxContainerSec1Img" src="images\undo.png"></button>
+                <div>Undo</div>
+            </div>
+            <div class="menu_FlexboxContainerSec2">
+                <div class="menu_FlexboxContainerSec2_2">
+                    <div class="menu_FlexboxContainerSec2_3">
+                        <button class="menu_FlexboxContainerButton"><img src="images\clipboard.png" height="40px" width="35px"></button>
+                    </div>
+                    <div class="menu_FlexboxContainerSec2_3">
+                        <button class="menu_FlexboxContainerButton"><img src="images\cut.png"></button>
+                        <button class="menu_FlexboxContainerButton"><img src="images\copy.png"></button>
+                    </div>
+                </div>
+                <div>Clipboard</div>
+            </div>
+            <div class="menu_FlexboxContainerSec3">
+                <div class="menu_FlexboxContainerSec3_2">
+                    <select class="menu_FlexboxContainerSec3_2Select" name="font" id="font">
+                        <option value="Arial">Arial</option>
+                        <option value="Algerian">Algerian</option>
+                        <option value="Calibri">Calibri</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Open sans">Open sans</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                    <input list="select" name="select" style="width: 60px" class="menu_FlexboxContainerSec3_2Select">
+                    <datalist class="form-control" id="select">    
+                        <option value="10"/>
+                        <option value="20"/>
+                        <option value="30"/>
+                    </datalist>
+                </div>
+                <div style="display:flex;">
+                    <div style="border-right:2px solid rgb(101, 101, 101);">
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/Bold.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/Italic.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/underline.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/strikethrough.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/subscript.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/superscript.png"></button>
+                    </div>
+                    <button type="button" class="menu_FlexboxContainerButton"><img src="images/clearformat.png"></button>
+                </div>
+                <div>
+                    <button type="button" class="menu_FlexboxContainerButton"><img src="images/font.png" width="24px" height="24px"></button>
+                    <button type="button" class="menu_FlexboxContainerButton"><img src="images/textformat.png"></button>
+                    <button type="button" class="menu_FlexboxContainerButton"><img src="images/highlighter.png" width="24px" height="24px"></button>
+                </div>
+                <div>Font</div>
+            </div>
+            <div class="menu_FlexboxContainerSec4">
+                <div class="menu_FlexboxContainerSec4_2" style="border:none;">
+                    <div class="menu_FlexboxContainerSec4_2">
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/bullet.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/numbullet.png"></button>
+                    </div>
+                    <div class="menu_FlexboxContainerSec4_2" style="border:none;">
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/incindent.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/decindent.png"></button>
+                    </div>
+                </div>
+                <div class="menu_FlexboxContainerSec4_2" style="border:none;">
+                    <div class="menu_FlexboxContainerSec4_2">
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/alignLeft.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/alignMiddle.png"></button>
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/alignRight.png"></button>
+                    </div>
+                    <div class="menu_FlexboxContainerSec4_2" style="border:none;">
+                        <button type="button" class="menu_FlexboxContainerButton"><img src="images/lineSpace.png">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="menu_FlexboxContainerButton"><img src="images/shading.png"></button>
+                    <button type="button" class="menu_FlexboxContainerButton"><img src="images/border.png"></button>
+                </div>
+                <div>Paragraph</div>
+            </div>
+            <div class="menu_FlexboxContainerSec5">
+                <button type="button" class="menu_FlexboxContainerButton"><img src="images/search2.png" width="60px" height="60px"></button>
+                <div>Search</div>
+            </div>
+        </div>
+        <div class="mainBodyFlexboxContainer">
+            <div id="textArea" class="textArea">
+                
+            </div>
+        </div>
+    </body>
+</html>
